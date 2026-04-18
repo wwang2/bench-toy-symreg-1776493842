@@ -1,0 +1,19 @@
+{
+  "verdict": "ACCEPT",
+  "rounds": 1,
+  "invoked_via": "Agent(subagent_type=figure-critic)",
+  "overall_comment": "Both required figures are clean, on-style, and clearly communicate that the closed form sin(x) + 0.1 x^2 matches the target with machine-zero residual and pure-noise residual structure.",
+  "figures": [
+    {
+      "path": "orbits/01-sin-plus-quad/figures/narrative.png",
+      "issues": [
+        {"severity": "MINOR", "issue": "Panel (a) legend has a single entry (±σ_noise = 0.03) which duplicates what the shaded band already implies, adding minor visual noise.", "fix": "Drop the legend in panel (a) and instead label the band inline with a small gray text annotation."},
+        {"severity": "MINOR", "issue": "Headline metric (test MSE = 0) is absent from the narrative figure; a reader seeing only narrative.png must infer success from residual std vs sigma comparison.", "fix": "Add measured metric to the suptitle."}
+      ]
+    },
+    {
+      "path": "orbits/01-sin-plus-quad/figures/results.png",
+      "issues": []
+    }
+  ]
+}
